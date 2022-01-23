@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sdf version='1.6'>
+  <model name='torpedo'>
+    <link name='base_link'>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+      <inertial>
+        <mass>4400</mass>
+        <inertia>
+          <ixx>0.145833</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.145833</iyy>
+          <iyz>0</iyz>
+          <izz>0.125</izz>
+        </inertia>
+        <pose>0 0 0 0 -0 0</pose>
+      </inertial>
+      <visual name="base_link_body_visual">
+        <pose frame=''>0 0 0 0 1.57079632679 0</pose>
+        <geometry>
+          <cylinder>
+            <length>5</length>
+            <radius>0.25</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkYellow</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name="base_link_head_visual">
+        <pose frame=''>2.5 0 0 0 0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.25</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkYellow</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name="base_link_tail_visual">
+        <pose frame=''>-2.5 0 0 0 0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.25</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGray</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <collision name="base_link_body_collision">
+        <pose frame=''>0 0 0 0 1.57079632679 0</pose>
+        <geometry>
+          <cylinder>
+            <length>5</length>
+            <radius>0.25</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name="base_link_head_collision">
+        <pose frame=''>2.5 0 0 0 0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.25</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <collision name="base_link_tail_collision">
+        <pose frame=''>-2.5 0 0 0 0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.25</radius>
+          </sphere>
+        </geometry>
+      </collision>
+    </link>
+    <link name='propeller_link'>
+      <pose frame=''>-2.954 0 0 0 0 0</pose>
+      <inertial>
+        <mass>10</mass>
+        <pose>0 0 0 0 -0 0</pose>
+      </inertial>
+      <visual name='propeller_link_visual'>
+        <pose frame=''>0.203947 0 0 0 -1.57079632679 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.5</length>
+            <radius>0.05</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGray</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='propeller_link_blade_1_visual'>
+        <pose frame=''>0 -0.125 0 0 -1.1708 0</pose>
+        <geometry>
+          <box>
+            <size>0.005 0.25 0.1</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGray</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='propeller_link_blade_2_visual'>
+        <pose frame=''>0 0 0.125 0 0 -0.4</pose>
+        <geometry>
+          <box>
+            <size>0.1 0.005 0.25</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGray</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='propeller_link_blade_3_visual'>
+        <pose frame=''>0 0.125 0 0 1.1708 0</pose>
+        <geometry>
+          <box>
+            <size>0.005 0.25 0.1</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGray</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='propeller_link_blade_4_visual'>
+        <pose frame=''>0 0 -0.125 0 0 0.4</pose>
+        <geometry>
+          <box>
+            <size>0.1 0.005 0.25</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGray</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <collision name='propeller_link_collision'>
+        <pose frame=''>0.203947 0 0 0 -1.57079632679 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.5</length>
+            <radius>0.05</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name='propeller_link_blade_1_collision'>
+        <pose frame=''>0 -0.125 0 0 -1.1708 0</pose>
+        <geometry>
+          <box>
+            <size>0.005 0.25 0.1</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='propeller_link_blade_2_collision'>
+        <pose frame=''>0 0 0.125 0 0 -0.4</pose>
+        <geometry>
+          <box>
+            <size>0.1 0.005 0.25</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='propeller_link_blade_3_collision'>
+        <pose frame=''>0 0.125 0 0 1.1708 0</pose>
+        <geometry>
+          <box>
+            <size>0.005 0.25 0.1</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='propeller_link_blade_4_collision'>
+        <pose frame=''>0 0 -0.125 0 0 0.4</pose>
+        <geometry>
+          <box>
+            <size>0.1 0.005 0.25</size>
+          </box>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='propeller_joint' type='revolute'>
+      <parent>base_link</parent>
+      <child>propeller_link</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+      </axis>
+    </joint>
+    <link name='rudder_link'>
+      <pose frame=''>0 0 0 0 0 0</pose>
+      <inertial>
+        <mass>1</mass>
+        <pose>0 0 0 0 -0 0</pose>
+      </inertial>
+      <visual name='rudder_link_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.15 0.02 1.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkYellow</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <collision name='rudder_link_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.15 0.02 1.5</size>
+          </box>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='rudder_joint' type='revolute'>
+      <parent>base_link</parent>
+      <child>rudder_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+      </axis>
+    </joint>
+
+    <plugin name="propeller_liftdrag_blade_1" filename="libLiftDragPlugin.so">
+      <air_density>1000</air_density><cla>1.2535816618911175</cla><cla_stall>-1.4326647564469914</cla_stall><cda>0</cda><cda_stall>1.4326647564469914</cda_stall><alpha_stall>1.396</alpha_stall>
+      <a0>0.4</a0>
+      <area>0.025</area>
+      <forward>0 0 -1</forward>
+      <upward>1 0 0</upward>
+      <link_name>propeller_link</link_name>
+      <cp>0 -0.125 0</cp>
+    </plugin>
+
+    <plugin name="propeller_liftdrag_blade_2" filename="libLiftDragPlugin.so">
+      <air_density>1000</air_density><cla>1.2535816618911175</cla><cla_stall>-1.4326647564469914</cla_stall><cda>0</cda><cda_stall>1.4326647564469914</cda_stall><alpha_stall>1.396</alpha_stall>
+      <a0>0.4</a0>
+      <area>0.025</area>
+      <forward>0 -1 0</forward>
+      <upward>1 0 0</upward>
+      <link_name>propeller_link</link_name>
+      <cp>0 0 0.125</cp>
+    </plugin>
+
+    <plugin name="propeller_liftdrag_blade_3" filename="libLiftDragPlugin.so">
+      <air_density>1000</air_density><cla>1.2535816618911175</cla><cla_stall>-1.4326647564469914</cla_stall><cda>0</cda><cda_stall>1.4326647564469914</cda_stall><alpha_stall>1.396</alpha_stall>
+      <a0>0.4</a0>
+      <area>0.025</area>
+      <forward>0 0 1</forward>
+      <upward>1 0 0</upward>
+      <link_name>propeller_link</link_name>
+      <cp>0 0.125 0</cp>
+    </plugin>
+
+    <plugin name="propeller_liftdrag_blade_4" filename="libLiftDragPlugin.so">
+      <air_density>1000</air_density><cla>1.2535816618911175</cla><cla_stall>-1.4326647564469914</cla_stall><cda>0</cda><cda_stall>1.4326647564469914</cda_stall><alpha_stall>1.396</alpha_stall>
+      <a0>0.4</a0>
+      <area>0.025</area>
+      <forward>0 1 0</forward>
+      <upward>1 0 0</upward>
+      <link_name>propeller_link</link_name>
+      <cp>0 0 -0.125</cp>
+    </plugin>
+
+    <plugin name="rudder_liftdrag" filename="libLiftDragPlugin.so">
+      <air_density>1000</air_density><cla>1.2535816618911175</cla><cla_stall>-1.4326647564469914</cla_stall><cda>0</cda><cda_stall>1.4326647564469914</cda_stall><alpha_stall>1.396</alpha_stall>
+      <a0>0</a0>
+      <area>0.225</area>
+      <forward>1 0 0</forward>
+      <upward>0 1 0</upward>
+      <link_name>rudder_link</link_name>
+      <cp>0 0 0</cp>
+    </plugin>
+
+    <plugin name='torpedo_plugin' filename='libtorpedo.so'>
+      <namespace>torpedo</namespace>
+      <propeller_joint>propeller_joint</propeller_joint>
+      <propeller_topic>/propeller/velocity</propeller_topic>
+      <rudder_link>rudder_link</rudder_link>
+      <rudder_topic>/rudder/angle</rudder_topic>
+    </plugin>
+
+    <!-- <plugin name="ground_truth" filename="libgazebo_ros_p3d.so">
+      <frameName>world</frameName>
+      <bodyName>base_link</bodyName>
+      <topicName>odom</topicName>
+      <updateRate>30.0</updateRate>
+    </plugin> -->
+
+  </model>
+</sdf>
